@@ -112,7 +112,7 @@ body{
 .pipeline-step.active .pipeline-label{color:var(--accent-dark);font-weight:600}
 .pipeline-step.done .pipeline-label{color:var(--success)}
 
-/* banner vagas */
+/* banner */
 .vagas-banner{
   background:#1e1e1e;border-bottom:1px solid var(--border);
   color:var(--text);padding:16px 20px;text-align:center;
@@ -371,7 +371,7 @@ body{
 <body>
 
 <header class="app-header">
-  <div class="brand">Werner Coiffeur &middot; Realinhamento Capilar</div>
+  <div class="brand">Werner Coiffeur &middot; Corte Feminino</div>
   <h1>Guia de Atendimento</h1>
   <p class="subtitle">Siga o fluxo ou toque na fase que precisa.</p>
 </header>
@@ -383,25 +383,21 @@ body{
       <div class="pipeline-dot-row"><div class="pipeline-dot">1</div></div>
       <span class="pipeline-label">Primeiro Contato</span>
     </div>
-    <div class="pipeline-step" data-pipeline="2" onclick="navigatePipeline('valor')">
+    <div class="pipeline-step" data-pipeline="2" onclick="navigatePipeline('agendamento')">
       <div class="pipeline-dot-row"><div class="pipeline-dot">2</div></div>
-      <span class="pipeline-label">Valor + Sinal</span>
-    </div>
-    <div class="pipeline-step" data-pipeline="3" onclick="navigatePipeline('agendamento')">
-      <div class="pipeline-dot-row"><div class="pipeline-dot">3</div></div>
       <span class="pipeline-label">Agendamento</span>
     </div>
-    <div class="pipeline-step" data-pipeline="4" onclick="navigatePipeline('pos')">
-      <div class="pipeline-dot-row"><div class="pipeline-dot">4</div></div>
+    <div class="pipeline-step" data-pipeline="3" onclick="navigatePipeline('pos')">
+      <div class="pipeline-dot-row"><div class="pipeline-dot">3</div></div>
       <span class="pipeline-label">P&oacute;s-agendamento</span>
     </div>
   </div>
 </div>
 
 <div class="vagas-banner">
-  <h2>A&ccedil;&atilde;o: 20 Vagas &middot; Realinhamento Capilar</h2>
-  <p>De R$750 por R$390 &middot; Sinal de R$195</p>
-  <div class="vagas-pill"><span class="dot"></span><span id="vagasCount">20</span> vagas restantes</div>
+  <h2>A&ccedil;&atilde;o: Corte Feminino &middot; Ipanema</h2>
+  <p>De R$178 por R$95 &middot; Equipe M&aacute;rcio Guadagno</p>
+  <div class="vagas-pill"><span class="dot"></span>Campanha ativa</div>
 </div>
 
 <!-- HOME: PHASE GRID -->
@@ -417,29 +413,22 @@ body{
     <div class="phase-card" data-phase="primeiro" onclick="showPhase('primeiro')">
       <div class="phase-icon">&#9993;</div>
       <div class="phase-label">Primeiro Contato</div>
-      <div class="phase-count">Acolher + explicar</div>
+      <div class="phase-count">Acolher + apresentar</div>
       <span class="pipeline-badge">1</span>
-    </div>
-
-    <div class="phase-card" data-phase="valor" onclick="showPhase('valor')">
-      <div class="phase-icon">&#9733;</div>
-      <div class="phase-label">Valor + Sinal</div>
-      <div class="phase-count">R$390 + sinal R$195</div>
-      <span class="pipeline-badge">2</span>
     </div>
 
     <div class="phase-card" data-phase="agendamento" onclick="showPhase('agendamento')">
       <div class="phase-icon">&#10003;</div>
       <div class="phase-label">Agendamento</div>
-      <div class="phase-count">Hor&aacute;rio + Pix + confirmar</div>
-      <span class="pipeline-badge">3</span>
+      <div class="phase-count">Hor&aacute;rio + confirmar</div>
+      <span class="pipeline-badge">2</span>
     </div>
 
     <div class="phase-card" data-phase="pos" onclick="showPhase('pos')">
       <div class="phase-icon">&#9829;</div>
       <div class="phase-label">P&oacute;s-agendamento</div>
       <div class="phase-count">Lembrete + remarcar</div>
-      <span class="pipeline-badge">4</span>
+      <span class="pipeline-badge">3</span>
     </div>
 
     <div class="phase-card" data-phase="objecoes" onclick="showPhase('objecoes')">
@@ -473,20 +462,19 @@ body{
     <span class="phase-title">Funil Completo</span>
   </div>
 
-  <div class="section-intro">A jornada do lead do an&uacute;ncio at&eacute; o procedimento no sal&atilde;o.</div>
+  <div class="section-intro">A jornada da lead do an&uacute;ncio at&eacute; o corte no sal&atilde;o.</div>
 
   <div class="funnel-visual" style="margin-top:12px">
     <div class="funnel-step-mini"><span class="step-num">1</span><span class="step-text"><strong>An&uacute;ncio Meta Ads</strong> &middot; criativo gera desejo, CTA leva pro Instagram</span></div>
     <div class="funnel-step-mini"><span class="step-num">2</span><span class="step-text"><strong>ManyChat no Instagram</strong> &middot; automa&ccedil;&atilde;o qualifica e encaminha pra Camilla</span></div>
-    <div class="funnel-step-mini"><span class="step-num">3</span><span class="step-text"><strong>Camilla acolhe + explica</strong> &middot; primeiro contato, gera conex&atilde;o</span></div>
-    <div class="funnel-step-mini"><span class="step-num">4</span><span class="step-text"><strong>Apresenta valor + sinal</strong> &middot; R$750 por R$390, sinal de R$195</span></div>
-    <div class="funnel-step-mini"><span class="step-num">5</span><span class="step-text"><strong>Agendamento + Pix</strong> &middot; hor&aacute;rio + sinal pago = vaga garantida</span></div>
-    <div class="funnel-step-mini"><span class="step-num">6</span><span class="step-text"><strong>Procedimento no sal&atilde;o</strong> &middot; M&aacute;rcio realiza o realinhamento</span></div>
-    <div class="funnel-step-mini"><span class="step-num">7</span><span class="step-text"><strong>P&oacute;s-agendamento</strong> &middot; lembrete + suporte + remarcar se preciso</span></div>
+    <div class="funnel-step-mini"><span class="step-num">3</span><span class="step-text"><strong>Camilla acolhe + apresenta</strong> &middot; primeiro contato, explica o corte e o valor</span></div>
+    <div class="funnel-step-mini"><span class="step-num">4</span><span class="step-text"><strong>Agendamento</strong> &middot; marca hor&aacute;rio, pagamento integral no dia</span></div>
+    <div class="funnel-step-mini"><span class="step-num">5</span><span class="step-text"><strong>Corte no sal&atilde;o</strong> &middot; equipe do M&aacute;rcio realiza o corte</span></div>
+    <div class="funnel-step-mini"><span class="step-num">6</span><span class="step-text"><strong>P&oacute;s-agendamento</strong> &middot; lembrete + suporte + remarcar se preciso</span></div>
   </div>
 
   <div class="note-box" style="margin-top:12px">
-    <strong>Importante:</strong> O an&uacute;ncio N&Atilde;O menciona o sinal de 50%. O lead chega sabendo R$750 por R$390 e as 20 vagas. Voc&ecirc; apresenta o sinal de R$195 depois de explicar o servi&ccedil;o e gerar interesse. A escassez &eacute; real (20 vagas). Nunca invente n&uacute;meros.
+    <strong>Importante:</strong> O valor &eacute; R$95, pago no dia do corte. N&atilde;o tem sinal nem pagamento antecipado. A lead chega sabendo &ldquo;De R$178 por R$95&rdquo;. O corte &eacute; feito pela equipe do M&aacute;rcio Guadagno, n&atilde;o por ele diretamente. Endere&ccedil;o: Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595 &mdash; Ipanema.
   </div>
 
   <button class="next-step-btn" onclick="showPhase('primeiro')">Iniciar atendimento &#8594; Primeiro Contato</button>
@@ -497,21 +485,21 @@ body{
   <div class="back-bar">
     <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
     <span class="phase-title">Primeiro Contato</span>
-    <span class="step-indicator">Etapa 1 de 4</span>
+    <span class="step-indicator">Etapa 1 de 3</span>
   </div>
 
   <div class="script-card open">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">1</span>
-      <h3>Primeiro contato</h3>
+      <h3>Acolher + apresentar o corte</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
       <div class="script-block" id="pc1">Oi, [nome]! Tudo bem? Aqui &eacute; a Camilla, da Werner Coiffeur.
 
-Vi que voc&ecirc; se interessou pelo realinhamento capilar. Que bom ter voc&ecirc; aqui!
+Vi que voc&ecirc; se interessou pelo corte feminino. Que bom ter voc&ecirc; aqui!
 
-Posso te explicar como funciona?</div>
+Posso te contar como funciona?</div>
       <button class="copy-btn" onclick="copyScript('pc1',this)">Copiar</button>
 
       <div class="note-box">
@@ -520,70 +508,19 @@ Posso te explicar como funciona?</div>
     </div></div>
   </div>
 
-  <!-- DECISION CARDS -->
-  <div class="decision-section">
-    <div class="decision-header">
-      <div class="decision-header-icon">&#9735;</div>
-      <h4>Para onde ir agora?</h4>
-    </div>
-
-    <div class="decision-card" onclick="showPhase('valor')">
-      <span class="decision-dot hot"></span>
-      <span class="decision-text">Lead respondeu com interesse &#8594; <strong>Valor + Sinal</strong></span>
-      <span class="decision-arrow">&#8250;</span>
-    </div>
-    <div class="decision-card" onclick="showPhase('valor')">
-      <span class="decision-dot warm"></span>
-      <span class="decision-text">Lead perguntou pre&ccedil;o direto &#8594; <strong>Valor + Sinal</strong></span>
-      <span class="decision-arrow">&#8250;</span>
-    </div>
-    <div class="decision-card" onclick="showPhase('followup')">
-      <span class="decision-dot silent"></span>
-      <span class="decision-text">Lead n&atilde;o respondeu &#8594; <strong>Follow-up</strong></span>
-      <span class="decision-arrow">&#8250;</span>
-    </div>
-  </div>
-
-  <button class="next-step-btn" onclick="showPhase('valor')">Pr&oacute;xima etapa &#8594; Valor + Sinal</button>
-</div>
-
-<!-- PHASE: VALOR + SINAL -->
-<div class="phase-view" id="phase-valor" data-pipeline-step="2">
-  <div class="back-bar">
-    <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
-    <span class="phase-title">Valor + Sinal</span>
-    <span class="step-indicator">Etapa 2 de 4</span>
-  </div>
-
-  <div class="script-card open">
+  <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num">1</span>
+      <span class="sc-num">2</span>
       <h3>Explicar o servi&ccedil;o + valor</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="vs1">O realinhamento capilar deixa o cabelo alinhado, com movimento natural e sem aquela luta toda manh&atilde; pra arrumar.
+      <div class="script-block" id="pc2">O corte &eacute; feito pela equipe do M&aacute;rcio Guadagno, aqui na Werner Coiffeur em Ipanema.
 
-O valor normal &eacute; R$750. Estamos com uma a&ccedil;&atilde;o especial de 20 vagas por R$390.</div>
-      <button class="copy-btn" onclick="copyScript('vs1',this)">Copiar</button>
-    </div></div>
-  </div>
+O valor normal &eacute; R$178. Estamos com uma condi&ccedil;&atilde;o especial por R$95.
 
-  <div class="script-card">
-    <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num" style="background:var(--accent-dark)">$</span>
-      <h3>Introduzir o sinal (momento-chave)</h3>
-      <span class="sc-arrow">&#9662;</span>
-    </div>
-    <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="vs2">Pra garantir sua vaga, a gente pede um sinal de R$195 (metade do valor). Esse valor j&aacute; entra no pagamento. Voc&ecirc; paga s&oacute; a outra metade no dia.
-
-A gente faz assim porque as vagas s&atilde;o limitadas e queremos garantir que quem agendar realmente venha. Faz sentido pra voc&ecirc;?</div>
-      <button class="copy-btn" onclick="copyScript('vs2',this)">Copiar</button>
-
-      <div class="note-box">
-        <strong>Importante:</strong> Nunca diga "taxa" ou "cobran&ccedil;a antecipada". Diga "sinal" ou "reserva". Posicione como garantia da vaga, n&atilde;o como barreira.
-      </div>
+O pagamento &eacute; no dia, direto no sal&atilde;o. Quer agendar?</div>
+      <button class="copy-btn" onclick="copyScript('pc2',this)">Copiar</button>
     </div></div>
   </div>
 
@@ -595,23 +532,18 @@ A gente faz assim porque as vagas s&atilde;o limitadas e queremos garantir que q
     </div>
 
     <div class="decision-card" onclick="showPhase('agendamento')">
-      <span class="decision-dot accept"></span>
-      <span class="decision-text">Lead aceitou o sinal &#8594; <strong>Agendamento</strong></span>
+      <span class="decision-dot hot"></span>
+      <span class="decision-text">Lead quer agendar &#8594; <strong>Agendamento</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
     <div class="decision-card" onclick="showPhase('objecoes')">
       <span class="decision-dot warm"></span>
-      <span class="decision-text">Lead hesitou / questionou o sinal &#8594; <strong>Obje&ccedil;&otilde;es ("Por que pagar antes?")</strong></span>
+      <span class="decision-text">Lead hesitou / fez pergunta &#8594; <strong>Obje&ccedil;&otilde;es</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
-    <div class="decision-card" onclick="showPhase('objecoes')">
-      <span class="decision-dot expensive"></span>
-      <span class="decision-text">Lead achou caro &#8594; <strong>Obje&ccedil;&otilde;es ("T&aacute; caro")</strong></span>
-      <span class="decision-arrow">&#8250;</span>
-    </div>
-    <div class="decision-card" onclick="showPhase('objecoes')">
-      <span class="decision-dot think"></span>
-      <span class="decision-text">Lead disse "vou pensar" &#8594; <strong>Obje&ccedil;&otilde;es ("Vou pensar")</strong></span>
+    <div class="decision-card" onclick="showPhase('followup')">
+      <span class="decision-dot silent"></span>
+      <span class="decision-text">Lead n&atilde;o respondeu &#8594; <strong>Follow-up</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
   </div>
@@ -620,24 +552,23 @@ A gente faz assim porque as vagas s&atilde;o limitadas e queremos garantir que q
 </div>
 
 <!-- PHASE: AGENDAMENTO -->
-<div class="phase-view" id="phase-agendamento" data-pipeline-step="3">
+<div class="phase-view" id="phase-agendamento" data-pipeline-step="2">
   <div class="back-bar">
     <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
     <span class="phase-title">Agendamento</span>
-    <span class="step-indicator">Etapa 3 de 4</span>
+    <span class="step-indicator">Etapa 2 de 3</span>
   </div>
 
   <div class="script-card open">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">1</span>
-      <h3>Agendar + enviar Pix</h3>
+      <h3>Oferecer hor&aacute;rios</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="ag1">Perfeito! Vou reservar sua vaga.
-Temos hor&aacute;rios em [dia/hor&aacute;rio] e [dia/hor&aacute;rio]. Qual funciona melhor?
+      <div class="script-block" id="ag1">Perfeito! Vou reservar seu hor&aacute;rio.
 
-O sinal de R$195 pode ser via Pix. Te mando a chave agora?</div>
+Temos disponibilidade em [dia/hor&aacute;rio] e [dia/hor&aacute;rio]. Qual funciona melhor pra voc&ecirc;?</div>
       <button class="copy-btn" onclick="copyScript('ag1',this)">Copiar</button>
     </div></div>
   </div>
@@ -652,9 +583,9 @@ O sinal de R$195 pode ser via Pix. Te mando a chave agora?</div>
       <div class="script-block" id="ag2">Tudo certo, [nome]! Agendamento confirmado:
 
 &#128197; [dia], &agrave;s [hor&aacute;rio]
-&#128205; Werner Coiffeur, [endere&ccedil;o Ipanema]
-&#128135; Realinhamento capilar
-&#128176; Sinal: R$195 (pago) &middot; Restante: R$195 no dia
+&#128205; Werner Coiffeur &mdash; Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
+&#9986; Corte feminino
+&#128176; R$95 (pagamento no dia)
 
 Te esperamos!</div>
       <button class="copy-btn" onclick="copyScript('ag2',this)">Copiar</button>
@@ -664,11 +595,11 @@ Te esperamos!</div>
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">3</span>
-      <h3>Se perguntar se pode pagar tudo no dia</h3>
+      <h3>Se perguntar quem vai cortar</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="ag3">Entendo! A gente adotou o sinal de R$195 pra reserva porque as vagas s&atilde;o bem disputadas. Assim a gente garante o seu hor&aacute;rio e ningu&eacute;m fica sem vaga. O restante voc&ecirc; paga no dia, tranquilo.</div>
+      <div class="script-block" id="ag3">O corte &eacute; feito pela equipe do M&aacute;rcio Guadagno, que trabalha junto com ele na Werner. S&atilde;o profissionais treinados por ele, com o mesmo padr&atilde;o de qualidade.</div>
       <button class="copy-btn" onclick="copyScript('ag3',this)">Copiar</button>
     </div></div>
   </div>
@@ -682,12 +613,17 @@ Te esperamos!</div>
 
     <div class="decision-card" onclick="showPhase('pos')">
       <span class="decision-dot confirmed"></span>
-      <span class="decision-text">Pagou sinal + confirmou &#8594; <strong>P&oacute;s-agendamento</strong></span>
+      <span class="decision-text">Confirmou hor&aacute;rio &#8594; <strong>P&oacute;s-agendamento</strong></span>
+      <span class="decision-arrow">&#8250;</span>
+    </div>
+    <div class="decision-card" onclick="showPhase('objecoes')">
+      <span class="decision-dot warm"></span>
+      <span class="decision-text">Fez mais perguntas &#8594; <strong>Obje&ccedil;&otilde;es</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
     <div class="decision-card" onclick="showPhase('followup')">
       <span class="decision-dot pending"></span>
-      <span class="decision-text">N&atilde;o pagou ainda &#8594; <strong>Follow-up em 2h</strong></span>
+      <span class="decision-text">Disse que vai ver e sumiu &#8594; <strong>Follow-up</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
   </div>
@@ -696,11 +632,11 @@ Te esperamos!</div>
 </div>
 
 <!-- PHASE: POS-AGENDAMENTO -->
-<div class="phase-view" id="phase-pos" data-pipeline-step="4">
+<div class="phase-view" id="phase-pos" data-pipeline-step="3">
   <div class="back-bar">
     <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
     <span class="phase-title">P&oacute;s-agendamento</span>
-    <span class="step-indicator">Etapa 4 de 4</span>
+    <span class="step-indicator">Etapa 3 de 3</span>
   </div>
 
   <div class="script-card open">
@@ -710,7 +646,7 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="pos1">Oi, [nome]! Passando pra lembrar do seu hor&aacute;rio amanh&atilde;, [dia] &agrave;s [hor&aacute;rio], na Werner Coiffeur. Tudo certo?</div>
+      <div class="script-block" id="pos1">Oi, [nome]! Passando pra lembrar do seu hor&aacute;rio amanh&atilde;, [dia] &agrave;s [hor&aacute;rio], na Werner Coiffeur em Ipanema. Tudo certo?</div>
       <button class="copy-btn" onclick="copyScript('pos1',this)">Copiar</button>
     </div></div>
   </div>
@@ -722,7 +658,7 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="pos2">Sem problema, [nome]. Consigo remarcar pra [dia/hor&aacute;rio]. O sinal que voc&ecirc; pagou fica v&aacute;lido pro novo hor&aacute;rio.</div>
+      <div class="script-block" id="pos2">Sem problema, [nome]. Consigo remarcar pra [dia/hor&aacute;rio]. Me avisa qual hor&aacute;rio fica melhor pra voc&ecirc;.</div>
       <button class="copy-btn" onclick="copyScript('pos2',this)">Copiar</button>
     </div></div>
   </div>
@@ -730,12 +666,18 @@ Te esperamos!</div>
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">3</span>
-      <h3>Se pedir reembolso do sinal</h3>
+      <h3>P&oacute;s-corte (pedir avalia&ccedil;&atilde;o)</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="pos3">Entendo. O sinal &eacute; pra garantir a reserva da vaga, ent&atilde;o n&atilde;o fazemos devolu&ccedil;&atilde;o. Mas posso remarcar pra qualquer data dispon&iacute;vel. Quer que eu veja os hor&aacute;rios?</div>
+      <div class="script-block" id="pos3">Oi, [nome]! Gostou do resultado? Ficou lindo!
+
+Se puder, deixa uma avalia&ccedil;&atilde;o pra gente no Google. Ajuda muito e leva menos de 1 minuto. Obrigada!</div>
       <button class="copy-btn" onclick="copyScript('pos3',this)">Copiar</button>
+
+      <div class="note-box">
+        <strong>Dica:</strong> Pedir avalia&ccedil;&atilde;o no dia seguinte ao corte, quando a cliente j&aacute; viveu o resultado em casa.
+      </div>
     </div></div>
   </div>
 </div>
@@ -754,24 +696,24 @@ Te esperamos!</div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num" style="background:var(--danger)">$</span>
-      <h3>"Por que precisa pagar antes?"</h3>
+      <span class="sc-num" style="background:var(--danger)">?</span>
+      <h3>"N&atilde;o &eacute; o M&aacute;rcio que corta?"</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="obj1">As vagas s&atilde;o bem disputadas e a gente quer garantir que o hor&aacute;rio seja realmente seu. O sinal de R$195 desconta do valor total. Voc&ecirc; n&atilde;o paga nada a mais, s&oacute; antecipa metade. E se precisar remarcar, o sinal fica v&aacute;lido.</div>
+      <div class="script-block" id="obj1">O corte &eacute; feito pela equipe do M&aacute;rcio, que trabalha com ele no dia a dia na Werner. S&atilde;o profissionais que ele treinou pessoalmente. O padr&atilde;o de qualidade &eacute; o mesmo. Esse pre&ccedil;o especial de R$95 &eacute; justamente por ser com a equipe.</div>
       <button class="copy-btn" onclick="copyScript('obj1',this)">Copiar</button>
     </div></div>
   </div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num" style="background:var(--danger)">!</span>
-      <h3>"T&aacute; caro" / "Vi mais barato"</h3>
+      <span class="sc-num" style="background:var(--danger)">$</span>
+      <h3>"Vi mais barato" / "Achei caro"</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="obj2">Entendo, [nome]. O realinhamento na Werner custa normalmente R$750. Essa a&ccedil;&atilde;o de R$390 &eacute; uma condi&ccedil;&atilde;o especial com vagas limitadas. O M&aacute;rcio trabalha com produtos de alta qualidade e o resultado dura bem mais. Se quiser, posso te mandar fotos de resultados pra voc&ecirc; ver.</div>
+      <div class="script-block" id="obj2">Entendo, [nome]. O corte na Werner custa normalmente R$178. Essa condi&ccedil;&atilde;o de R$95 &eacute; uma a&ccedil;&atilde;o especial. A equipe do M&aacute;rcio trabalha com padr&atilde;o de sal&atilde;o de Ipanema. Se quiser, posso te mandar fotos de resultados pra voc&ecirc; ver.</div>
       <button class="copy-btn" onclick="copyScript('obj2',this)">Copiar</button>
     </div></div>
   </div>
@@ -783,19 +725,19 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="obj3">Claro, [nome]! Fica &agrave; vontade. S&oacute; te aviso que as vagas s&atilde;o limitadas. Restam [Y] das 20. Quando decidir, me chama que vejo se ainda tem dispon&iacute;vel.</div>
+      <div class="script-block" id="obj3">Claro, [nome]! Fica &agrave; vontade. A condi&ccedil;&atilde;o de R$95 &eacute; por tempo limitado. Quando decidir, me chama que vejo os hor&aacute;rios dispon&iacute;veis.</div>
       <button class="copy-btn" onclick="copyScript('obj3',this)">Copiar</button>
     </div></div>
   </div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num" style="background:var(--danger)">&#128137;</span>
-      <h3>"Quanto tempo dura?"</h3>
+      <span class="sc-num" style="background:var(--danger)">&#128205;</span>
+      <h3>"Fica longe pra mim"</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="obj4">O realinhamento dura em m&eacute;dia de 3 a 4 meses, dependendo do tipo de cabelo e dos cuidados em casa. O M&aacute;rcio vai te orientar tudo no dia sobre os cuidados pra durar o m&aacute;ximo.</div>
+      <div class="script-block" id="obj4">Entendo! Por enquanto a a&ccedil;&atilde;o &eacute; s&oacute; na nossa unidade de Ipanema mesmo, na Galeria Astoria. Se um dia pintar uma oportunidade mais perto de voc&ecirc;, te aviso com certeza.</div>
       <button class="copy-btn" onclick="copyScript('obj4',this)">Copiar</button>
     </div></div>
   </div>
@@ -820,7 +762,7 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu1">[nome], vi que voc&ecirc; se interessou pelo realinhamento capilar. Ficou com alguma d&uacute;vida? Estou aqui pra te ajudar!</div>
+      <div class="script-block" id="fu1">[nome], vi que voc&ecirc; se interessou pelo corte feminino. Ficou com alguma d&uacute;vida? Estou aqui pra te ajudar!</div>
       <button class="copy-btn" onclick="copyScript('fu1',this)">Copiar</button>
     </div></div>
   </div>
@@ -832,7 +774,7 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu2">Oi, [nome]! Ainda temos vagas na a&ccedil;&atilde;o especial de realinhamento por R$390. Se tiver interesse, me avisa que te passo os hor&aacute;rios dispon&iacute;veis.</div>
+      <div class="script-block" id="fu2">Oi, [nome]! Ainda temos hor&aacute;rios dispon&iacute;veis pro corte feminino por R$95. Se tiver interesse, me avisa que te passo as op&ccedil;&otilde;es.</div>
       <button class="copy-btn" onclick="copyScript('fu2',this)">Copiar</button>
     </div></div>
   </div>
@@ -844,7 +786,7 @@ Te esperamos!</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu3">Oi, [nome]! Passando pela &uacute;ltima vez sobre a a&ccedil;&atilde;o do realinhamento. Restam [Y] vagas das 20. Se decidir, &eacute; s&oacute; me chamar. Foi um prazer falar com voc&ecirc;!</div>
+      <div class="script-block" id="fu3">Oi, [nome]! Passando pela &uacute;ltima vez sobre o corte feminino por R$95 na Werner. Se decidir, &eacute; s&oacute; me chamar. Foi um prazer falar com voc&ecirc;!</div>
       <button class="copy-btn" onclick="copyScript('fu3',this)">Copiar</button>
     </div></div>
   </div>
@@ -872,6 +814,37 @@ Te esperamos!</div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">2</span>
+      <h3>Endere&ccedil;o completo (copiar e colar)</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-block" id="ut2">Werner Coiffeur
+Galeria Astoria, loja 116
+R. Visc. de Piraj&aacute;, 595 &mdash; Ipanema
+Rio de Janeiro &mdash; RJ, 22410-003</div>
+      <button class="copy-btn" onclick="copyScript('ut2',this)">Copiar</button>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">3</span>
+      <h3>Resumo r&aacute;pido da a&ccedil;&atilde;o (cola interna)</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-block" id="ut3">Corte feminino &mdash; Equipe M&aacute;rcio Guadagno
+De R$178 por R$95
+Pagamento no dia, no sal&atilde;o
+Werner Coiffeur &mdash; Ipanema
+Campanha de setembro/2026</div>
+      <button class="copy-btn" onclick="copyScript('ut3',this)">Copiar</button>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num" style="background:var(--accent-dark)">&#9733;</span>
       <h3>Regras de ouro</h3>
       <span class="sc-arrow">&#9662;</span>
@@ -880,15 +853,13 @@ Te esperamos!</div>
       <div class="rules-card">
         <h3>Regras de ouro do atendimento</h3>
         <div class="rule"><span class="rule-num">1</span><span><strong>Responder em menos de 5 minutos.</strong> Lead quente esfria r&aacute;pido.</span></div>
-        <div class="rule"><span class="rule-num">2</span><span><strong>Nunca diga "taxa" ou "cobran&ccedil;a".</strong> Diga "sinal" ou "reserva".</span></div>
-        <div class="rule"><span class="rule-num">3</span><span><strong>O sinal &eacute; filtro de compromisso, n&atilde;o barreira.</strong> Posicione como "garantir sua vaga".</span></div>
-        <div class="rule"><span class="rule-num">4</span><span><strong>Se a lead hesitar no sinal, reforce que desconta do total.</strong> Ela n&atilde;o paga a mais.</span></div>
-        <div class="rule"><span class="rule-num">5</span><span><strong>Mandar Pix copia-e-cola pronto.</strong> Quanto menos atrito, melhor.</span></div>
-        <div class="rule"><span class="rule-num">6</span><span><strong>Usar o nome da pessoa sempre.</strong> Gera conex&atilde;o imediata.</span></div>
-        <div class="rule"><span class="rule-num">7</span><span><strong>Escassez real.</strong> Controle quantas vagas restam. Nunca invente n&uacute;meros.</span></div>
-        <div class="rule"><span class="rule-num">8</span><span><strong>Se perguntarem "por que pagar antes?", diga a verdade de forma leve.</strong> Transpar&ecirc;ncia gera confian&ccedil;a.</span></div>
-        <div class="rule"><span class="rule-num">9</span><span><strong>N&atilde;o discutir pre&ccedil;o.</strong> Se achou caro, agrade&ccedil;a e encerre com eleg&acirc;ncia.</span></div>
-        <div class="rule"><span class="rule-num">10</span><span><strong>A ordem importa.</strong> Explicar servi&ccedil;o &#8594; Valor &#8594; Sinal &#8594; Agendar. Nunca pule etapas.</span></div>
+        <div class="rule"><span class="rule-num">2</span><span><strong>Usar o nome da pessoa sempre.</strong> Gera conex&atilde;o imediata.</span></div>
+        <div class="rule"><span class="rule-num">3</span><span><strong>O corte &eacute; pela equipe, n&atilde;o pelo M&aacute;rcio.</strong> Deixar claro desde o in&iacute;cio. Refor&ccedil;ar que s&atilde;o treinados por ele.</span></div>
+        <div class="rule"><span class="rule-num">4</span><span><strong>Pagamento no dia, no sal&atilde;o.</strong> Sem sinal, sem Pix antecipado. Simples assim.</span></div>
+        <div class="rule"><span class="rule-num">5</span><span><strong>Sempre oferecer 2 op&ccedil;&otilde;es de hor&aacute;rio.</strong> Facilita a decis&atilde;o.</span></div>
+        <div class="rule"><span class="rule-num">6</span><span><strong>N&atilde;o discutir pre&ccedil;o.</strong> Se achou caro, agrade&ccedil;a e encerre com eleg&acirc;ncia.</span></div>
+        <div class="rule"><span class="rule-num">7</span><span><strong>A ordem importa.</strong> Acolher &#8594; Explicar &#8594; Valor &#8594; Agendar. N&atilde;o pule etapas.</span></div>
+        <div class="rule"><span class="rule-num">8</span><span><strong>Lembrete no dia anterior.</strong> Reduz no-show e mostra cuidado.</span></div>
       </div>
     </div></div>
   </div>
@@ -898,9 +869,8 @@ Te esperamos!</div>
 /* Pipeline state */
 var pipelineMap = {
   primeiro: 1,
-  valor: 2,
-  agendamento: 3,
-  pos: 4
+  agendamento: 2,
+  pos: 3
 };
 var currentPhase = null;
 
