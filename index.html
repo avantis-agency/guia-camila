@@ -126,6 +126,7 @@ body{
 }
 .vagas-pill .dot{width:8px;height:8px;border-radius:50%;background:#6bdf6b;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.vagas-pill .dot.dot-encerrada{background:var(--warning);animation:none}
 
 /* phase grid (home) */
 #homeView{transition:opacity .2s ease}
@@ -398,7 +399,7 @@ body{
 <div class="vagas-banner">
   <h2>A&ccedil;&atilde;o: Corte Feminino &middot; Ipanema</h2>
   <p>De R$178 por R$95 &middot; Equipe M&aacute;rcio Guadagno</p>
-  <div class="vagas-pill"><span class="dot"></span>Campanha ativa</div>
+  <div class="vagas-pill"><span class="dot dot-encerrada"></span><span>A&ccedil;&atilde;o encerrada &middot; atendimento dos leads at&eacute; <span class="prazo-oferta">15/10</span></span></div>
 </div>
 
 <!-- HOME: PHASE GRID -->
@@ -442,7 +443,7 @@ body{
     <div class="phase-card" data-phase="followup" onclick="showPhase('followup')">
       <div class="phase-icon">&#8635;</div>
       <div class="phase-label">Follow-up</div>
-      <div class="phase-count">2h + 24h + 3 dias</div>
+      <div class="phase-count">Por situa&ccedil;&atilde;o do lead</div>
       <span class="utility-badge">Apoio</span>
     </div>
 
@@ -470,7 +471,7 @@ body{
     <span class="phase-title">Funil Completo</span>
   </div>
 
-  <div class="section-intro">A jornada da lead do an&uacute;ncio at&eacute; o corte no sal&atilde;o.</div>
+  <div class="section-intro">O caminho da lead do an&uacute;ncio at&eacute; o corte no sal&atilde;o.</div>
 
   <div class="funnel-visual" style="margin-top:12px">
     <div class="funnel-step-mini"><span class="step-num">1</span><span class="step-text"><strong>An&uacute;ncio Meta Ads</strong> &middot; criativo gera desejo, CTA leva pro Instagram</span></div>
@@ -482,7 +483,7 @@ body{
   </div>
 
   <div class="note-box" style="margin-top:12px">
-    <strong>Importante:</strong> O valor &eacute; R$95, pago no dia do corte. N&atilde;o tem sinal nem pagamento antecipado. A lead chega sabendo &ldquo;De R$178 por R$95&rdquo;. O corte &eacute; feito pela equipe do M&aacute;rcio Guadagno, n&atilde;o por ele diretamente. Endere&ccedil;o: Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595 &mdash; Ipanema.
+    <strong>Combinado da a&ccedil;&atilde;o:</strong> O valor &eacute; R$95, pago no dia do corte. N&atilde;o tem sinal nem pagamento antecipado. A lead chega sabendo &ldquo;De R$178 por R$95&rdquo;. O corte &eacute; feito pela equipe do M&aacute;rcio Guadagno, n&atilde;o por ele diretamente. Endere&ccedil;o: Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema.
   </div>
 
   <button class="next-step-btn" onclick="showPhase('primeiro')">Iniciar atendimento &#8594; Primeiro Contato</button>
@@ -591,7 +592,7 @@ Temos disponibilidade em [dia/hor&aacute;rio] e [dia/hor&aacute;rio]. Qual funci
       <div class="script-block" id="ag2">Tudo certo, [nome]! Agendamento confirmado:
 
 &#128197; [dia], &agrave;s [hor&aacute;rio]
-&#128205; Werner Coiffeur &mdash; Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
+&#128205; Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
 &#9986; Corte feminino
 &#128176; R$95 (pagamento no dia)
 
@@ -802,7 +803,7 @@ Vou ver a agenda dele pra voc&ecirc;. Qual dia e turno ficam melhores?</div>
     <div class="script-card-body"><div class="script-card-content">
       <div class="script-block" id="m3">Tudo certo, [nome]! Seu corte com o M&aacute;rcio est&aacute; confirmado:
 &#128197; [dia], &agrave;s [hor&aacute;rio]
-&#128205; Werner Coiffeur &mdash; Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
+&#128205; Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
 &#9986; Corte feminino com M&aacute;rcio Guadagno
 &#128176; R$95 (pagamento no dia)
 Te esperamos!</div>
@@ -857,45 +858,201 @@ E quando quiser manter o corte, &eacute; s&oacute; me chamar que eu vejo a agend
 <div class="phase-view" id="phase-followup">
   <div class="back-bar">
     <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
-    <span class="phase-title">Follow-up</span>
+    <span class="phase-title">Follow-up por situa&ccedil;&atilde;o</span>
     <span class="step-indicator">Apoio</span>
   </div>
 
-  <div class="section-intro">Sequ&ecirc;ncia de follow-ups para leads que n&atilde;o responderam. Toque para expandir.</div>
+  <div class="section-intro">Os an&uacute;ncios do corte pararam. Agora o trabalho &eacute; retomar quem j&aacute; conversou com voc&ecirc; e n&atilde;o marcou. Veja onde a conversa parou, marque a etiqueta e use os scripts daquela situa&ccedil;&atilde;o. No m&aacute;ximo tr&ecirc;s mensagens por situa&ccedil;&atilde;o. Toque para expandir.</div>
+
+  <div class="note-box">
+    <strong>Valor da a&ccedil;&atilde;o at&eacute; <span class="prazo-oferta">15/10</span>:</strong> quem j&aacute; conversou com voc&ecirc; mant&eacute;m o corte por R$95 at&eacute; essa data. Depois, volta pro valor normal, R$178. Depois do prazo, n&atilde;o ofere&ccedil;a R$95 sem falar com a equipe Avantis.
+  </div>
+
+  <div class="guide-box">
+    <div class="item"><strong>Como usar:</strong> leia a conversa, marque a etiqueta e mande a mensagem da vez. Anote o dia que mandou pra saber quando vem a pr&oacute;xima.</div>
+    <div class="item"><strong>Ela respondeu?</strong> Saia do follow-up e siga pelo Agendamento ou pelas Obje&ccedil;&otilde;es.</div>
+    <div class="item"><strong>Quando parar:</strong> se ela pedir pra parar, disser que n&atilde;o quer, ou n&atilde;o responder a mensagem final. Marque Encerrado e n&atilde;o chame de novo.</div>
+  </div>
 
   <div class="script-card open">
     <div class="script-card-header" onclick="toggleCard(this)">
-      <span class="sc-num">1</span>
-      <h3>N&atilde;o respondeu (2h depois)</h3>
+      <span class="sc-num" style="background:var(--accent-dark)">&#10003;</span>
+      <h3>Etiquetas no WhatsApp Business</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu1">[nome], vi que voc&ecirc; se interessou pelo corte feminino. Ficou com alguma d&uacute;vida? Estou aqui pra te ajudar!</div>
+      <div class="guide-box" style="margin-top:0">
+        <div class="item">Crie estas etiquetas no WhatsApp Business e marque cada conversa. Troque a etiqueta sempre que a situa&ccedil;&atilde;o mudar.</div>
+        <div class="item"><strong>N&atilde;o respondeu:</strong> recebeu sua primeira mensagem e nunca respondeu. Situa&ccedil;&atilde;o 1.</div>
+        <div class="item"><strong>Sumiu:</strong> respondeu, mostrou interesse e parou de falar. Situa&ccedil;&atilde;o 2.</div>
+        <div class="item"><strong>Vai agendar:</strong> disse que ia marcar e n&atilde;o marcou. Situa&ccedil;&atilde;o 3.</div>
+        <div class="item"><strong>Travou:</strong> parou no pre&ccedil;o, no hor&aacute;rio ou numa d&uacute;vida. Situa&ccedil;&atilde;o 4.</div>
+        <div class="item"><strong>N&atilde;o veio:</strong> faltou ou desmarcou sem remarcar. Situa&ccedil;&atilde;o 5.</div>
+        <div class="item"><strong>Atendida:</strong> j&aacute; cortou. Situa&ccedil;&atilde;o 6.</div>
+        <div class="item"><strong>Agendada:</strong> tem dia e hor&aacute;rio. Sem follow-up, s&oacute; o lembrete do P&oacute;s-agendamento.</div>
+        <div class="item"><strong>Encerrado:</strong> pediu pra parar ou n&atilde;o respondeu a mensagem final.</div>
+      </div>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">1</span>
+      <h3>N&atilde;o respondeu a primeira mensagem</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-label">1&ordf; mensagem &middot; hoje</div>
+      <div class="script-block" id="fu1">Oi, [nome]! Tudo bem? Aqui &eacute; a Camilla, da Werner Coiffeur. Voc&ecirc; chamou a gente sobre o corte feminino e acho que a conversa se perdeu por aqui. Ainda tem interesse?</div>
       <button class="copy-btn" onclick="copyScript('fu1',this)">Copiar</button>
+
+      <div class="script-label">2&ordf; mensagem &middot; 3 dias depois, sem resposta</div>
+      <div class="script-block" id="fu2">[nome], te conto rapidinho como funciona: o corte &eacute; com a equipe do M&aacute;rcio Guadagno, aqui em Ipanema, por R$95 (o normal &eacute; R$178). O pagamento &eacute; no dia, no sal&atilde;o. Quer que eu veja um hor&aacute;rio pra voc&ecirc;?</div>
+      <button class="copy-btn" onclick="copyScript('fu2',this)">Copiar</button>
+
+      <div class="script-label">Mensagem final &middot; 4 dias depois da 2&ordf;</div>
+      <div class="script-block" id="fu3">Oi, [nome]! A a&ccedil;&atilde;o do corte j&aacute; terminou, mas pra quem chegou a falar comigo o valor de R$95 vale at&eacute; <span class="prazo-oferta">15/10</span>. Depois volta pra R$178. Se n&atilde;o for a hora, tudo bem, n&atilde;o te chamo mais sobre isso. Quando quiser, &eacute; s&oacute; me mandar mensagem.</div>
+      <button class="copy-btn" onclick="copyScript('fu3',this)">Copiar</button>
     </div></div>
   </div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">2</span>
-      <h3>N&atilde;o respondeu (24h)</h3>
+      <h3>Mostrou interesse e sumiu</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu2">Oi, [nome]! Ainda temos hor&aacute;rios dispon&iacute;veis pro corte feminino por R$95. Se tiver interesse, me avisa que te passo as op&ccedil;&otilde;es.</div>
-      <button class="copy-btn" onclick="copyScript('fu2',this)">Copiar</button>
+      <div class="script-label">1&ordf; mensagem &middot; 2 dias depois da &uacute;ltima resposta</div>
+      <div class="script-block" id="fu4">Oi, [nome]! Nossa conversa sobre o corte ficou pela metade. Ficou alguma d&uacute;vida? Se quiser, j&aacute; vejo um hor&aacute;rio pra voc&ecirc;.</div>
+      <button class="copy-btn" onclick="copyScript('fu4',this)">Copiar</button>
+
+      <div class="script-label">2&ordf; mensagem &middot; 3 dias depois, sem resposta</div>
+      <div class="script-block" id="fu5">[nome], tenho hor&aacute;rio em [dia/hor&aacute;rio] e [dia/hor&aacute;rio] aqui na Werner. Algum serve pra voc&ecirc;?</div>
+      <button class="copy-btn" onclick="copyScript('fu5',this)">Copiar</button>
+
+      <div class="script-label">Mensagem final &middot; 4 dias depois da 2&ordf;</div>
+      <div class="script-block" id="fu6">Oi, [nome]! &Uacute;ltimo recado sobre o corte, pra n&atilde;o ficar insistindo: o valor de R$95 vale pra voc&ecirc; at&eacute; <span class="prazo-oferta">15/10</span>. Depois volta pra R$178. Se quiser marcar, &eacute; s&oacute; me chamar aqui.</div>
+      <button class="copy-btn" onclick="copyScript('fu6',this)">Copiar</button>
+
+      <div class="note-box">
+        <strong>Personalize:</strong> se ela contou o que queria no cabelo, cite isso na 1&ordf; mensagem.
+      </div>
     </div></div>
   </div>
 
   <div class="script-card">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">3</span>
-      <h3>Follow-up final (3 dias)</h3>
+      <h3>Disse que ia agendar e n&atilde;o agendou</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="fu3">Oi, [nome]! Passando pela &uacute;ltima vez sobre o corte feminino por R$95 na Werner. Se decidir, &eacute; s&oacute; me chamar. Foi um prazer falar com voc&ecirc;!</div>
-      <button class="copy-btn" onclick="copyScript('fu3',this)">Copiar</button>
+      <div class="script-label">1&ordf; mensagem &middot; 1 a 2 dias depois</div>
+      <div class="script-block" id="fu7">Oi, [nome]! Voc&ecirc; comentou que ia ver o melhor dia pro corte. J&aacute; conseguiu ver? Me fala o dia e o turno que eu vejo os hor&aacute;rios pra voc&ecirc;.</div>
+      <button class="copy-btn" onclick="copyScript('fu7',this)">Copiar</button>
+
+      <div class="script-label">2&ordf; mensagem &middot; 3 dias depois, sem resposta</div>
+      <div class="script-block" id="fu8">[nome], tenho duas op&ccedil;&otilde;es aqui na Werner: [dia/hor&aacute;rio] ou [dia/hor&aacute;rio]. Quer que eu reserve uma delas?</div>
+      <button class="copy-btn" onclick="copyScript('fu8',this)">Copiar</button>
+
+      <div class="script-label">Mensagem final &middot; 4 dias depois da 2&ordf;</div>
+      <div class="script-block" id="fu9">Oi, [nome]! Passando uma &uacute;ltima vez: o corte por R$95 vale at&eacute; <span class="prazo-oferta">15/10</span>. Se quiser marcar antes, me avisa que eu vejo os hor&aacute;rios. Se mudou de ideia, sem problema!</div>
+      <button class="copy-btn" onclick="copyScript('fu9',this)">Copiar</button>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">4</span>
+      <h3>Travou no pre&ccedil;o, no hor&aacute;rio ou numa d&uacute;vida</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-label">Travou no pre&ccedil;o &middot; uma mensagem s&oacute;</div>
+      <div class="script-block" id="fu10">Oi, [nome]! S&oacute; pra te avisar: o corte por R$95 continua at&eacute; <span class="prazo-oferta">15/10</span>, com pagamento no dia, no sal&atilde;o. Se fizer sentido pra voc&ecirc; at&eacute; l&aacute;, me chama!</div>
+      <button class="copy-btn" onclick="copyScript('fu10',this)">Copiar</button>
+      <div class="note-box">
+        <strong>Pre&ccedil;o:</strong> vale a regra de ouro 6, n&atilde;o discuta valor. Mande s&oacute; esta mensagem. Sem resposta, marque Encerrado.
+      </div>
+
+      <div class="script-label">1&ordf; mensagem &middot; travou no hor&aacute;rio</div>
+      <div class="script-block" id="fu11">Oi, [nome]! Abriu hor&aacute;rio aqui na Werner: [dia/hor&aacute;rio] e [dia/hor&aacute;rio]. Algum desses funciona pra voc&ecirc;?</div>
+      <button class="copy-btn" onclick="copyScript('fu11',this)">Copiar</button>
+
+      <div class="script-label">1&ordf; mensagem &middot; ficou uma d&uacute;vida</div>
+      <div class="script-block" id="fu12">Oi, [nome]! Sobre o que voc&ecirc; perguntou: [resposta]. Quer que eu j&aacute; veja um hor&aacute;rio pra voc&ecirc;?</div>
+      <button class="copy-btn" onclick="copyScript('fu12',this)">Copiar</button>
+
+      <div class="script-label">2&ordf; mensagem &middot; 3 dias depois, sem resposta</div>
+      <div class="script-block" id="fu13">[nome], conseguiu pensar? Se ainda tiver alguma d&uacute;vida, me fala qual que eu te respondo.</div>
+      <button class="copy-btn" onclick="copyScript('fu13',this)">Copiar</button>
+
+      <div class="script-label">Mensagem final &middot; 4 dias depois da 2&ordf;</div>
+      <div class="script-block" id="fu14">Oi, [nome]! &Uacute;ltimo recado: o corte por R$95 vale at&eacute; <span class="prazo-oferta">15/10</span>. Depois volta pra R$178. N&atilde;o vou mais te chamar sobre isso, mas se decidir, &eacute; s&oacute; me mandar mensagem.</div>
+      <button class="copy-btn" onclick="copyScript('fu14',this)">Copiar</button>
+
+      <div class="note-box">
+        <strong>D&uacute;vida sobre quem corta ou sobre dist&acirc;ncia?</strong> Use as respostas da fase Obje&ccedil;&otilde;es.
+      </div>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">5</span>
+      <h3>N&atilde;o veio ou desmarcou sem remarcar</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-label">1&ordf; mensagem &middot; faltou (no dia ou no dia seguinte)</div>
+      <div class="script-block" id="fu15">Oi, [nome]! Vi que n&atilde;o deu pra voc&ecirc; vir hoje. T&aacute; tudo bem? Se quiser, remarco pra outro dia.</div>
+      <button class="copy-btn" onclick="copyScript('fu15',this)">Copiar</button>
+
+      <div class="script-label">1&ordf; mensagem &middot; desmarcou e n&atilde;o remarcou</div>
+      <div class="script-block" id="fu16">Oi, [nome]! Voc&ecirc; desmarcou o corte e ficou sem nova data. Quer que eu veja outro dia? Me fala o turno que fica melhor.</div>
+      <button class="copy-btn" onclick="copyScript('fu16',this)">Copiar</button>
+
+      <div class="script-label">Mensagem final &middot; 3 dias depois, sem resposta</div>
+      <div class="script-block" id="fu17">[nome], o seu valor de R$95 continua valendo at&eacute; <span class="prazo-oferta">15/10</span>. Se quiser remarcar at&eacute; l&aacute;, me fala o dia que eu vejo os hor&aacute;rios. Se n&atilde;o der agora, tudo bem!</div>
+      <button class="copy-btn" onclick="copyScript('fu17',this)">Copiar</button>
+
+      <div class="note-box">
+        <strong>Sem cobran&ccedil;a:</strong> n&atilde;o comente a falta. Aqui s&atilde;o s&oacute; duas mensagens. Sem resposta, marque Encerrado.
+      </div>
+    </div></div>
+  </div>
+
+  <div class="script-card">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">6</span>
+      <h3>J&aacute; foi atendida</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="script-label">24 a 48 horas depois do corte</div>
+      <div class="script-block" id="fu18">Oi, [nome]! Como voc&ecirc; est&aacute; com o corte? Conseguiu finalizar em casa do jeito que gostou?</div>
+      <button class="copy-btn" onclick="copyScript('fu18',this)">Copiar</button>
+      <div class="note-box">
+        <strong>Gostou?</strong> Pe&ccedil;a a avalia&ccedil;&atilde;o no Google com o script 3 do P&oacute;s-agendamento. <strong>N&atilde;o gostou?</strong> Escute, anote e leve pra equipe antes de prometer qualquer coisa.
+      </div>
+
+      <div class="script-label">Indica&ccedil;&atilde;o &middot; depois de uma resposta positiva</div>
+      <div class="script-block" id="fu19">Que bom que voc&ecirc; gostou, [nome]! Se alguma amiga estiver querendo cortar, pode passar meu contato. Eu cuido dela por aqui.</div>
+      <button class="copy-btn" onclick="copyScript('fu19',this)">Copiar</button>
+
+      <div class="script-label">Manuten&ccedil;&atilde;o &middot; quando chegar a hora de cortar de novo</div>
+      <div class="script-block" id="fu20">Oi, [nome]! J&aacute; faz [tempo desde o corte] do seu corte aqui na Werner. Quer que eu veja um hor&aacute;rio pra manter o formato?</div>
+      <button class="copy-btn" onclick="copyScript('fu20',this)">Copiar</button>
+      <div class="note-box">
+        <strong>Valor da manuten&ccedil;&atilde;o:</strong> fora da a&ccedil;&atilde;o, o corte &eacute; R$178. Se ela perguntar, informe. N&atilde;o precisa citar antes.
+      </div>
+
+      <div class="decision-card" onclick="showPhase('pos')" style="margin-top:12px">
+        <span class="decision-dot confirmed"></span>
+        <span class="decision-text">Pedir avalia&ccedil;&atilde;o no Google &#8594; <strong>P&oacute;s-agendamento</strong></span>
+        <span class="decision-arrow">&#8250;</span>
+      </div>
     </div></div>
   </div>
 </div>
@@ -929,8 +1086,8 @@ E quando quiser manter o corte, &eacute; s&oacute; me chamar que eu vejo a agend
     <div class="script-card-body"><div class="script-card-content">
       <div class="script-block" id="ut2">Werner Coiffeur
 Galeria Astoria, loja 116
-R. Visc. de Piraj&aacute;, 595 &mdash; Ipanema
-Rio de Janeiro &mdash; RJ, 22410-003</div>
+R. Visc. de Piraj&aacute;, 595, Ipanema
+Rio de Janeiro, RJ, 22410-003</div>
       <button class="copy-btn" onclick="copyScript('ut2',this)">Copiar</button>
     </div></div>
   </div>
@@ -942,10 +1099,10 @@ Rio de Janeiro &mdash; RJ, 22410-003</div>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="ut3">Corte feminino &mdash; Equipe M&aacute;rcio Guadagno
+      <div class="script-block" id="ut3">Corte feminino com a equipe M&aacute;rcio Guadagno
 De R$178 por R$95
 Pagamento no dia, no sal&atilde;o
-Werner Coiffeur &mdash; Ipanema
+Werner Coiffeur, Ipanema
 Campanha de setembro/2026</div>
       <button class="copy-btn" onclick="copyScript('ut3',this)">Copiar</button>
     </div></div>
@@ -963,7 +1120,7 @@ Campanha de setembro/2026</div>
         <div class="rule"><span class="rule-num">1</span><span><strong>Responder em menos de 5 minutos.</strong> Lead quente esfria r&aacute;pido.</span></div>
         <div class="rule"><span class="rule-num">2</span><span><strong>Usar o nome da pessoa sempre.</strong> Gera conex&atilde;o imediata.</span></div>
         <div class="rule"><span class="rule-num">3</span><span><strong>O corte &eacute; pela equipe, n&atilde;o pelo M&aacute;rcio.</strong> Deixar claro desde o in&iacute;cio. Refor&ccedil;ar que s&atilde;o treinados por ele. Exce&ccedil;&atilde;o: clientes selecionadas pela equipe Avantis (ver Cliente M&aacute;rcio).</span></div>
-        <div class="rule"><span class="rule-num">4</span><span><strong>Pagamento no dia, no sal&atilde;o.</strong> Sem sinal, sem Pix antecipado. Simples assim.</span></div>
+        <div class="rule"><span class="rule-num">4</span><span><strong>Pagamento no dia, no sal&atilde;o.</strong> Sem sinal, sem Pix antecipado.</span></div>
         <div class="rule"><span class="rule-num">5</span><span><strong>Sempre oferecer 2 op&ccedil;&otilde;es de hor&aacute;rio.</strong> Facilita a decis&atilde;o.</span></div>
         <div class="rule"><span class="rule-num">6</span><span><strong>N&atilde;o discutir pre&ccedil;o.</strong> Se achou caro, agrade&ccedil;a e encerre com eleg&acirc;ncia.</span></div>
         <div class="rule"><span class="rule-num">7</span><span><strong>A ordem importa.</strong> Acolher &#8594; Explicar &#8594; Valor &#8594; Agendar. N&atilde;o pule etapas.</span></div>
@@ -974,6 +1131,10 @@ Campanha de setembro/2026</div>
 </div>
 
 <script>
+/* Prazo do valor da acao para quem ja conversou. Para mudar a data no guia todo, troque so aqui. */
+var PRAZO_OFERTA = '15/10';
+document.querySelectorAll('.prazo-oferta').forEach(function(el) { el.textContent = PRAZO_OFERTA; });
+
 /* Pipeline state */
 var pipelineMap = {
   primeiro: 1,
