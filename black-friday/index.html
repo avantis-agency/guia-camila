@@ -23,8 +23,9 @@
      Quantas vagas restam só sai do contador de vagas (salvo no navegador da Camilla).
   4. Pagamento no dia, no salão, sem sinal (regra dos guias anteriores).
   5. Sem a unidade da Barra e sem a seção "Cliente Márcio".
-  6. A lead já sabe o preço (está no anúncio e na mensagem pronta). A foto serve para indicar o
-     tratamento, não para liberar o valor. Sem foto, a Camilla indica pelo que a lead contou.
+  6. A lead já sabe o preço (está no anúncio e na mensagem pronta). Sem pedido de foto nesta ação
+     (decisão do Christopher): uma pergunta sobre o cabelo, a Camilla indica o tratamento e a equipe
+     confirma no salão.
   7. Lead que chega falando do corte por R$ 95 (setembro) ou do Outubro Rosa recebe a oferta atual:
      as duas ações já terminaram.
   8. Coloração pode ser agendada no mesmo dia, cobrada à parte, valor final confirmado no salão.
@@ -197,7 +198,7 @@ body{
   background:var(--bg-script);border-radius:8px;padding:2px 6px;font-weight:500;
 }
 .phase-card[data-phase="primeiro"] .phase-icon{background:rgba(122,184,130,.15);color:#7ab882}
-.phase-card[data-phase="foto"] .phase-icon{background:rgba(201,168,106,.15);color:var(--destaque)}
+.phase-card[data-phase="tratamento"] .phase-icon{background:rgba(201,168,106,.15);color:var(--destaque)}
 .phase-card[data-phase="valor"] .phase-icon{background:rgba(212,185,92,.15);color:#d4b95c}
 .phase-card[data-phase="agendamento"] .phase-icon{background:rgba(242,240,237,.1);color:var(--text)}
 .phase-card[data-phase="pos"] .phase-icon{background:rgba(180,140,200,.15);color:#b48cc8}
@@ -432,9 +433,9 @@ body{
       <div class="pipeline-dot-row"><div class="pipeline-dot">1</div></div>
       <span class="pipeline-label">Primeiro Contato</span>
     </div>
-    <div class="pipeline-step" data-pipeline="2" onclick="navigatePipeline('foto')">
+    <div class="pipeline-step" data-pipeline="2" onclick="navigatePipeline('tratamento')">
       <div class="pipeline-dot-row"><div class="pipeline-dot">2</div></div>
-      <span class="pipeline-label">Foto</span>
+      <span class="pipeline-label">Tratamento</span>
     </div>
     <div class="pipeline-step" data-pipeline="3" onclick="navigatePipeline('valor')">
       <div class="pipeline-dot-row"><div class="pipeline-dot">3</div></div>
@@ -481,10 +482,10 @@ body{
       <span class="pipeline-badge">1</span>
     </div>
 
-    <div class="phase-card" data-phase="foto" onclick="showPhase('foto')">
+    <div class="phase-card" data-phase="tratamento" onclick="showPhase('tratamento')">
       <div class="phase-icon">&#9673;</div>
-      <div class="phase-label">Foto + Tratamento</div>
-      <div class="phase-count">Foto, pergunta e indica&ccedil;&atilde;o</div>
+      <div class="phase-label">Tratamento</div>
+      <div class="phase-count">Uma pergunta e a indica&ccedil;&atilde;o</div>
       <span class="pipeline-badge">2</span>
     </div>
 
@@ -558,7 +559,7 @@ body{
     <div class="funnel-step-mini"><span class="step-num">1</span><span class="step-text"><strong>An&uacute;ncio no Instagram</strong> &middot; j&aacute; com o pre&ccedil;o (<span class="preco-acao">R$ 149</span>) e o bot&atilde;o &ldquo;Enviar mensagem&rdquo;</span></div>
     <div class="funnel-step-mini"><span class="step-num">2</span><span class="step-text"><strong>ManyChat no direct</strong> &middot; ela confirma o interesse e toca no bot&atilde;o que abre o seu WhatsApp</span></div>
     <div class="funnel-step-mini"><span class="step-num">3</span><span class="step-text"><strong>Seu WhatsApp</strong> &middot; ela chega com a mensagem pronta (veja abaixo)</span></div>
-    <div class="funnel-step-mini"><span class="step-num">4</span><span class="step-text"><strong>Foto + tratamento</strong> &middot; voc&ecirc; pede a foto, pergunta sobre o cabelo e indica o tratamento</span></div>
+    <div class="funnel-step-mini"><span class="step-num">4</span><span class="step-text"><strong>Tratamento</strong> &middot; uma pergunta sobre o cabelo e voc&ecirc; indica o tratamento</span></div>
     <div class="funnel-step-mini"><span class="step-num">5</span><span class="step-text"><strong>Valor + 2 hor&aacute;rios</strong> &middot; na mesma mensagem, com o que vem junto</span></div>
     <div class="funnel-step-mini"><span class="step-num">6</span><span class="step-text"><strong>Agendamento</strong> &middot; marque a vaga no contador, pagamento no dia</span></div>
     <div class="funnel-step-mini"><span class="step-num">7</span><span class="step-text"><strong>Sal&atilde;o</strong> &middot; equipe do M&aacute;rcio faz o corte e aplica o tratamento</span></div>
@@ -616,7 +617,7 @@ O tratamento pode ser o Revival, de reconstru&ccedil;&atilde;o, ou o Divine, de 
       <button class="copy-btn" onclick="copyScript('pc1',this)">Copiar</button>
 
       <div class="note-box">
-        <strong>Logo em seguida:</strong> mande a mensagem da etapa 2 (foto + pergunta), sem esperar resposta. S&atilde;o dois bal&otilde;es seguidos. Responda em menos de 5 minutos.
+        <strong>Logo em seguida:</strong> mande a pergunta da etapa 2 (como est&aacute; o cabelo), sem esperar resposta. S&atilde;o dois bal&otilde;es seguidos. Responda em menos de 5 minutos.
       </div>
     </div></div>
   </div>
@@ -674,9 +675,9 @@ As <span class="vagas-total">25</span> vagas da Black Friday antecipada j&aacute
       <span class="decision-text">Contador em 0 vagas &#8594; <strong>mensagem 3 (a&ccedil;&atilde;o encerrada)</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
-    <div class="decision-card" onclick="showPhase('foto')">
+    <div class="decision-card" onclick="showPhase('tratamento')">
       <span class="decision-dot hot"></span>
-      <span class="decision-text">Mandou a 1&ordf; mensagem &#8594; <strong>Foto + tratamento</strong></span>
+      <span class="decision-text">Mandou a 1&ordf; mensagem &#8594; <strong>Tratamento</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
     <div class="decision-card" onclick="showPhase('objecoes')">
@@ -691,29 +692,27 @@ As <span class="vagas-total">25</span> vagas da Black Friday antecipada j&aacute
     </div>
   </div>
 
-  <button class="next-step-btn" onclick="showPhase('foto')">Pr&oacute;xima etapa &#8594; Foto + tratamento</button>
+  <button class="next-step-btn" onclick="showPhase('tratamento')">Pr&oacute;xima etapa &#8594; Tratamento</button>
 </div>
 
-<!-- PHASE: FOTO + TRATAMENTO -->
-<div class="phase-view" id="phase-foto" data-pipeline-step="2">
+<!-- PHASE: TRATAMENTO -->
+<div class="phase-view" id="phase-tratamento" data-pipeline-step="2">
   <div class="back-bar">
     <button class="back-btn" onclick="goHome()">&#8592; Voltar</button>
-    <span class="phase-title">Foto + Tratamento</span>
+    <span class="phase-title">Tratamento</span>
     <span class="step-indicator">Etapa 2 de 5</span>
   </div>
 
-  <div class="section-intro">O pre&ccedil;o ela j&aacute; sabe. Aqui a foto serve para voc&ecirc; indicar o tratamento e a equipe ver o cabelo antes. Pe&ccedil;a a foto e, na mesma mensagem, fa&ccedil;a uma pergunta s&oacute;: como o cabelo est&aacute; hoje.</div>
+  <div class="section-intro">O pre&ccedil;o ela j&aacute; sabe. Aqui &eacute; uma pergunta s&oacute;, sobre como o cabelo est&aacute; hoje. Pela resposta voc&ecirc; indica o tratamento e j&aacute; segue pros hor&aacute;rios. Nesta a&ccedil;&atilde;o n&atilde;o pe&ccedil;a foto: quem confirma o tratamento &eacute; a equipe, no sal&atilde;o.</div>
 
   <div class="script-card open">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">1</span>
-      <h3>Pedir a foto + perguntar do cabelo</h3>
+      <h3>Perguntar do cabelo</h3>
       <span class="sc-arrow">&#9662;</span>
     </div>
     <div class="script-card-body"><div class="script-card-content">
-      <div class="script-block" id="ft1">Pra eu deixar tudo certo com a equipe e escolher o seu tratamento, me manda uma foto do seu cabelo? Solto, de costas, com luz do dia. Se tiver um print do corte que voc&ecirc; quer, pode mandar tamb&eacute;m.
-
-E me conta: hoje ele est&aacute; mais ressecado e sem brilho, ou mais quebradi&ccedil;o, depois de qu&iacute;mica?</div>
+      <div class="script-block" id="ft1">Pra eu j&aacute; deixar o seu tratamento separado com a equipe, me conta: hoje seu cabelo est&aacute; mais ressecado e sem brilho, ou mais quebradi&ccedil;o, com qu&iacute;mica (descolora&ccedil;&atilde;o, progressiva, alisamento)?</div>
       <button class="copy-btn" onclick="copyScript('ft1',this)">Copiar</button>
     </div></div>
   </div>
@@ -728,7 +727,7 @@ E me conta: hoje ele est&aacute; mais ressecado e sem brilho, ou mais quebradi&c
       <div class="guide-box" style="margin-top:0">
         <div class="item"><strong>Ressecado, opaco, sem brilho</strong> &#8594; Divine, o de nutri&ccedil;&atilde;o.</div>
         <div class="item"><strong>Quebradi&ccedil;o, com qu&iacute;mica</strong> (descolora&ccedil;&atilde;o, alisamento, progressiva) &#8594; Revival, o de reconstru&ccedil;&atilde;o.</div>
-        <div class="item"><strong>N&atilde;o soube dizer?</strong> Mostre a foto pra equipe antes de indicar.</div>
+        <div class="item"><strong>N&atilde;o soube dizer?</strong> Pergunte se ela fez qu&iacute;mica nos &uacute;ltimos meses. Fez &#8594; Revival. N&atilde;o fez &#8594; Divine.</div>
         <div class="item"><strong>Sem diagn&oacute;stico:</strong> voc&ecirc; indica pelo que ela contou. Quem confirma &eacute; a equipe, no sal&atilde;o.</div>
       </div>
 
@@ -741,13 +740,9 @@ E me conta: hoje ele est&aacute; mais ressecado e sem brilho, ou mais quebradi&c
       <button class="copy-btn" onclick="copyScript('ft3',this)">Copiar</button>
 
       <div class="note-box">
-        <strong>Em seguida:</strong> mande a mensagem da etapa 3, com o tratamento indicado no lugar de [tratamento]. Sobre os tratamentos, s&oacute; isso: Revival &eacute; reconstru&ccedil;&atilde;o, Divine &eacute; nutri&ccedil;&atilde;o. N&atilde;o prometa resultado.
+        <strong>Em seguida, direto:</strong> mande a mensagem da etapa 3 (valor + dois hor&aacute;rios), com o tratamento indicado no lugar de [tratamento]. Sobre os tratamentos, s&oacute; isso: Revival &eacute; reconstru&ccedil;&atilde;o, Divine &eacute; nutri&ccedil;&atilde;o. N&atilde;o prometa resultado.
       </div>
     </div></div>
-  </div>
-
-  <div class="note-box">
-    <strong>N&atilde;o quis mandar foto?</strong> Tudo bem. Indique o tratamento pelo que ela contou e siga para os hor&aacute;rios. A foto ajuda a equipe, mas n&atilde;o trava o agendamento.
   </div>
 
   <div class="decision-section">
@@ -768,7 +763,7 @@ E me conta: hoje ele est&aacute; mais ressecado e sem brilho, ou mais quebradi&c
     </div>
     <div class="decision-card" onclick="showPhase('followup')">
       <span class="decision-dot silent"></span>
-      <span class="decision-text">N&atilde;o mandou e parou de responder &#8594; <strong>Follow-up</strong></span>
+      <span class="decision-text">N&atilde;o respondeu a pergunta e sumiu &#8594; <strong>Follow-up</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
   </div>
@@ -1034,7 +1029,7 @@ Se puder, deixa uma avalia&ccedil;&atilde;o pra gente no Google. Ajuda muito e l
     <div class="script-card-body"><div class="script-card-content">
       <div class="script-block" id="obj2">D&aacute; sim, [nome]! A colora&ccedil;&atilde;o n&atilde;o entra na Black Friday antecipada. Ela fica a partir de <span class="preco-coloracao">R$ 290</span>, e a equipe confirma o valor final no sal&atilde;o, antes de come&ccedil;ar, porque depende do comprimento e da cor.
 
-Se quiser, eu agendo tudo no mesmo dia: o corte + [tratamento] por <span class="preco-acao">R$ 149</span> e a colora&ccedil;&atilde;o &agrave; parte. Me manda um print da cor que voc&ecirc; quer?</div>
+Se quiser, eu agendo tudo no mesmo dia: o corte + [tratamento] por <span class="preco-acao">R$ 149</span> e a colora&ccedil;&atilde;o &agrave; parte. Me conta qual cor voc&ecirc; quer?</div>
       <button class="copy-btn" onclick="copyScript('obj2',this)">Copiar</button>
       <div class="note-box">
         <strong>Tempo de sal&atilde;o:</strong> corte e colora&ccedil;&atilde;o juntos levam mais tempo. Confira a dura&ccedil;&atilde;o com a equipe antes de oferecer os hor&aacute;rios.
@@ -1184,7 +1179,7 @@ Quer que eu te mande dois hor&aacute;rios? Assim voc&ecirc; pensa j&aacute; sabe
       <button class="copy-btn" onclick="copyScript('fu1',this)">Copiar</button>
 
       <div class="script-label">2&ordf; mensagem &middot; no dia seguinte, sem resposta</div>
-      <div class="script-block" id="fu2">[nome], te conto rapidinho: na Black Friday antecipada do Werner, o corte com a equipe do M&aacute;rcio Guadagno + um tratamento Bra&eacute; sai de <span class="preco-separado">R$ 467</span> por <span class="preco-acao">R$ 149</span>, e s&atilde;o apenas <span class="vagas-total">25</span> vagas. Me manda uma foto do seu cabelo que eu te indico o tratamento e te passo os hor&aacute;rios.</div>
+      <div class="script-block" id="fu2">[nome], te conto rapidinho: na Black Friday antecipada do Werner, o corte com a equipe do M&aacute;rcio Guadagno + um tratamento Bra&eacute; sai de <span class="preco-separado">R$ 467</span> por <span class="preco-acao">R$ 149</span>, e s&atilde;o apenas <span class="vagas-total">25</span> vagas. Me conta como est&aacute; seu cabelo hoje que eu te indico o tratamento e te passo os hor&aacute;rios.</div>
       <button class="copy-btn" onclick="copyScript('fu2',this)">Copiar</button>
 
       <div class="script-label">Mensagem final &middot; 1 dia depois, sem resposta</div>
@@ -1213,7 +1208,7 @@ Quer que eu te mande dois hor&aacute;rios? Assim voc&ecirc; pensa j&aacute; sabe
       <button class="copy-btn" onclick="copyScript('fu6',this)">Copiar</button>
 
       <div class="note-box">
-        <strong>Personalize:</strong> se ela mandou foto ou contou como est&aacute; o cabelo, cite isso na 1&ordf; mensagem.
+        <strong>Personalize:</strong> se ela contou como est&aacute; o cabelo, cite isso na 1&ordf; mensagem.
       </div>
     </div></div>
   </div>
@@ -1474,7 +1469,7 @@ Leads chegam com &ldquo;Vim pela Black Friday antecipada do Werner&rdquo; na men
     <h3>Regras de ouro da Black Friday antecipada</h3>
     <div class="rule"><span class="rule-num">1</span><span><strong>Responder em menos de 5 minutos.</strong> Lead quente esfria r&aacute;pido.</span></div>
     <div class="rule"><span class="rule-num">2</span><span><strong>O pre&ccedil;o ela j&aacute; sabe.</strong> Confirme o que vem nos <span class="preco-acao">R$ 149</span> e mostre a conta: de <span class="preco-separado">R$ 467</span> por <span class="preco-acao">R$ 149</span> (corte <span class="preco-corte-normal">R$ 178</span> + tratamento <span class="preco-tratamento">R$ 289</span>).</span></div>
-    <div class="rule"><span class="rule-num">3</span><span><strong>Foto e uma pergunta.</strong> Pela resposta, indique o tratamento. Sem foto, indique pelo que ela contou e siga.</span></div>
+    <div class="rule"><span class="rule-num">3</span><span><strong>Uma pergunta, sem foto.</strong> Pergunte como est&aacute; o cabelo, indique o tratamento pela resposta e siga pros hor&aacute;rios. A equipe confirma no sal&atilde;o.</span></div>
     <div class="rule"><span class="rule-num">4</span><span><strong>Valor sempre com dois hor&aacute;rios.</strong> O que vem junto, as vagas e duas op&ccedil;&otilde;es de dia, na mesma mensagem.</span></div>
     <div class="rule"><span class="rule-num">5</span><span><strong>Revival &eacute; reconstru&ccedil;&atilde;o, Divine &eacute; nutri&ccedil;&atilde;o.</strong> Voc&ecirc; indica, a equipe confirma no sal&atilde;o. N&atilde;o prometa resultado.</span></div>
     <div class="rule"><span class="rule-num">6</span><span><strong>Colora&ccedil;&atilde;o fica fora.</strong> A partir de <span class="preco-coloracao">R$ 290</span>, valor final no sal&atilde;o. Pode agendar no mesmo dia do corte.</span></div>
@@ -1588,7 +1583,7 @@ montarVagas();
 /* Pipeline state */
 var pipelineMap = {
   primeiro: 1,
-  foto: 2,
+  tratamento: 2,
   valor: 3,
   agendamento: 4,
   pos: 5
