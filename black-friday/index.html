@@ -22,7 +22,9 @@
      internas, nunca nos scripts. O segundo argumento é a agenda de novembro e dezembro, que lota.
      Quantas vagas restam só sai do contador de vagas (salvo no navegador da Camilla).
   4. Pagamento no dia, no salão, sem sinal (regra dos guias anteriores).
-  5. Sem a unidade da Barra e sem a seção "Cliente Márcio".
+  5. Sem a unidade da Barra. A ação é com a equipe do Márcio. Exceção: clientes selecionadas pela
+     equipe Avantis cortam com o próprio Márcio, em Ipanema, pela mesma condição (R$ 149), e contam
+     nas vagas. A Camilla nunca oferece isso por conta própria.
   6. A lead já sabe o preço (está no anúncio e na mensagem pronta). Sem pedido de foto nesta ação
      (decisão do Christopher): uma pergunta sobre o cabelo, a Camilla indica o tratamento e a equipe
      confirma no salão.
@@ -587,6 +589,11 @@ body{
       <span class="decision-text">Falou do corte por R$ 95 ou do Outubro Rosa &#8594; <strong>Primeiro Contato, mensagem 2</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
+    <div class="decision-card" onclick="showPhase('primeiro');abrirCard('cardMarcio')">
+      <span class="decision-dot hot"></span>
+      <span class="decision-text">Disse que foi selecionada pra fazer com o M&aacute;rcio &#8594; <strong>Cliente selecionada pro M&aacute;rcio</strong></span>
+      <span class="decision-arrow">&#8250;</span>
+    </div>
   </div>
 
   <button class="next-step-btn" onclick="showPhase('primeiro')">Iniciar atendimento &#8594; Primeiro Contato</button>
@@ -647,7 +654,7 @@ Est&aacute; rolando a Black Friday antecipada do Werner: corte com a equipe do M
     </div></div>
   </div>
 
-  <div class="script-card">
+  <div class="script-card" id="cardEncerrada">
     <div class="script-card-header" onclick="toggleCard(this)">
       <span class="sc-num">3</span>
       <h3>A&ccedil;&atilde;o encerrada (chegou depois das <span class="vagas-total">25</span> vagas)</h3>
@@ -664,15 +671,63 @@ As <span class="vagas-total">25</span> vagas da Black Friday antecipada j&aacute
     </div></div>
   </div>
 
+  <div class="script-card" id="cardMarcio">
+    <div class="script-card-header" onclick="toggleCard(this)">
+      <span class="sc-num">4</span>
+      <h3>Cliente selecionada pro M&aacute;rcio</h3>
+      <span class="sc-arrow">&#9662;</span>
+    </div>
+    <div class="script-card-body"><div class="script-card-content">
+      <div class="guide-box" style="margin-top:0">
+        <div class="item"><strong>Como reconhecer:</strong> ela chega com a mensagem abaixo, ou a equipe Avantis te avisa o nome dela.</div>
+        <div class="item"><strong>Mesma condi&ccedil;&atilde;o da a&ccedil;&atilde;o:</strong> corte + tratamento Bra&eacute; por <span class="preco-acao">R$ 149</span>, s&oacute; que com o pr&oacute;prio M&aacute;rcio, aqui em Ipanema. Veja a agenda dele antes de oferecer os hor&aacute;rios.</div>
+        <div class="item"><strong>Voc&ecirc; nunca oferece isso por conta pr&oacute;pria.</strong> S&oacute; vale pra cliente enviada pela equipe Avantis. Pediu o M&aacute;rcio sem ter sido selecionada? Use &ldquo;&Eacute; o M&aacute;rcio que corta?&rdquo; nas Obje&ccedil;&otilde;es.</div>
+        <div class="item"><strong>Conta nas vagas:</strong> marque no Contador de vagas, com &ldquo;(M&aacute;rcio)&rdquo; depois do nome.</div>
+      </div>
+
+      <div class="script-label" style="margin-top:18px">Como a mensagem chega</div>
+      <div class="script-block example">Oi Camilla! Vim pela Black Friday antecipada e fui selecionada para fazer com o M&aacute;rcio. Prefiro Ipanema.</div>
+
+      <div class="script-label">Confirmar + dois hor&aacute;rios do M&aacute;rcio</div>
+      <div class="script-block" id="pc5">Oi, [nome]! Tudo bem? Aqui &eacute; a Camilla, da Werner Coiffeur.
+
+Confirmado: voc&ecirc; vai fazer com o pr&oacute;prio M&aacute;rcio Guadagno, aqui no Werner, em Ipanema, com a mesma condi&ccedil;&atilde;o da Black Friday antecipada: corte + um tratamento Bra&eacute;, de <span class="preco-separado">R$ 467</span> por <span class="preco-acao">R$ 149</span>.
+
+Vi a agenda dele e tenho [dia/hor&aacute;rio] ou [dia/hor&aacute;rio]. Qual fica melhor pra voc&ecirc;?</div>
+      <button class="copy-btn" onclick="copyScript('pc5',this)">Copiar</button>
+
+      <div class="script-label">Agendamento confirmado com o M&aacute;rcio</div>
+      <div class="script-block" id="pc6">Tudo certo, [nome]! Agendamento confirmado:
+
+&#128197; [dia], &agrave;s [hor&aacute;rio]
+&#128205; Werner Coiffeur, Galeria Astoria, loja 116, R. Visc. de Piraj&aacute;, 595, Ipanema
+&#9986; Corte com o M&aacute;rcio Guadagno
+&#127873; [tratamento] da Bra&eacute;, j&aacute; incluso
+&#128176; <span class="preco-acao">R$ 149</span> (pagamento no dia, no sal&atilde;o)
+
+Te esperamos!</div>
+      <button class="copy-btn" onclick="copyScript('pc6',this)">Copiar</button>
+
+      <div class="note-box">
+        <strong>O tratamento:</strong> depois que ela escolher o hor&aacute;rio, mande a pergunta do cabelo (etapa 2) e indique o tratamento antes da confirma&ccedil;&atilde;o.
+      </div>
+    </div></div>
+  </div>
+
   <div class="decision-section">
     <div class="decision-header">
       <div class="decision-header-icon">&#9735;</div>
       <h4>Para onde ir agora?</h4>
     </div>
 
-    <div class="decision-card" onclick="showPhase('vagas')">
+    <div class="decision-card" onclick="abrirCard('cardEncerrada')">
       <span class="decision-dot cold"></span>
       <span class="decision-text">Contador em 0 vagas &#8594; <strong>mensagem 3 (a&ccedil;&atilde;o encerrada)</strong></span>
+      <span class="decision-arrow">&#8250;</span>
+    </div>
+    <div class="decision-card" onclick="abrirCard('cardMarcio')">
+      <span class="decision-dot hot"></span>
+      <span class="decision-text">Selecionada pela Avantis pro M&aacute;rcio &#8594; <strong>mensagem 4</strong></span>
       <span class="decision-arrow">&#8250;</span>
     </div>
     <div class="decision-card" onclick="showPhase('tratamento')">
@@ -1012,10 +1067,18 @@ Se puder, deixa uma avalia&ccedil;&atilde;o pra gente no Google. Ajuda muito e l
       <button class="copy-btn" onclick="copyScript('obj1',this)">Copiar</button>
 
       <div class="script-label">Se ela insistir em cortar com o pr&oacute;prio M&aacute;rcio</div>
-      <div class="script-block" id="obj10">Cortar com o pr&oacute;prio M&aacute;rcio &eacute; outro servi&ccedil;o, [nome], e n&atilde;o faz parte da Black Friday antecipada. A a&ccedil;&atilde;o &eacute; sempre com a equipe dele. Se quiser, eu vejo a agenda do M&aacute;rcio separado e te falo.</div>
+      <div class="script-block" id="obj10">Na Black Friday antecipada, o corte &eacute; com a equipe do M&aacute;rcio, [nome]. Cortar com o pr&oacute;prio M&aacute;rcio &eacute; outro servi&ccedil;o. Se quiser, eu vejo a agenda dele separado e te falo.</div>
       <button class="copy-btn" onclick="copyScript('obj10',this)">Copiar</button>
       <div class="note-box">
-        <strong>A a&ccedil;&atilde;o &eacute; s&oacute; com a equipe.</strong> N&atilde;o prometa hor&aacute;rio nem valor de corte com o M&aacute;rcio. Se ela quiser, consulte a agenda dele &agrave; parte, como outro servi&ccedil;o.
+        <strong>A a&ccedil;&atilde;o &eacute; com a equipe.</strong> N&atilde;o prometa hor&aacute;rio nem valor de corte com o M&aacute;rcio. Se ela quiser, consulte a agenda dele &agrave; parte, como outro servi&ccedil;o.
+      </div>
+      <div class="note-box">
+        <strong>Exce&ccedil;&atilde;o:</strong> cliente selecionada pela equipe Avantis faz com o pr&oacute;prio M&aacute;rcio, pelos mesmos {PA}. Ela chega com &ldquo;fui selecionada para fazer com o M&aacute;rcio&rdquo; na mensagem, ou a Avantis te avisa. Voc&ecirc; nunca oferece isso por conta pr&oacute;pria.
+      </div>
+      <div class="decision-card" onclick="showPhase('primeiro');abrirCard('cardMarcio')" style="margin-top:12px">
+        <span class="decision-dot hot"></span>
+        <span class="decision-text">Cliente selecionada &#8594; <strong>Primeiro Contato, mensagem 4</strong></span>
+        <span class="decision-arrow">&#8250;</span>
       </div>
     </div></div>
   </div>
@@ -1155,6 +1218,7 @@ Quer que eu te mande dois hor&aacute;rios? Assim voc&ecirc; pensa j&aacute; sabe
     <div class="script-card-body"><div class="script-card-content">
       <div class="guide-box" style="margin-top:0">
         <div class="item"><strong>Black Friday:</strong> marque em toda lead que chegou com &ldquo;Vim pela Black Friday antecipada do Werner&rdquo;. Assim ela n&atilde;o se mistura com as leads das a&ccedil;&otilde;es anteriores.</div>
+        <div class="item"><strong>M&aacute;rcio:</strong> cliente selecionada pela equipe Avantis pra fazer com o pr&oacute;prio M&aacute;rcio. Use junto com a etiqueta Black Friday.</div>
         <div class="item"><strong>N&atilde;o respondeu:</strong> recebeu sua primeira mensagem e nunca respondeu. Situa&ccedil;&atilde;o 1.</div>
         <div class="item"><strong>Sumiu:</strong> respondeu, mostrou interesse e parou de falar. Situa&ccedil;&atilde;o 2.</div>
         <div class="item"><strong>Vai agendar:</strong> disse que ia marcar e n&atilde;o marcou. Situa&ccedil;&atilde;o 3.</div>
@@ -1394,7 +1458,7 @@ Leads chegam com &ldquo;Vim pela Black Friday antecipada do Werner&rdquo; na men
     <span class="step-indicator">A&ccedil;&atilde;o</span>
   </div>
 
-  <div class="section-intro">Marque uma vaga a cada agendamento confirmado (depois de mandar a mensagem de confirma&ccedil;&atilde;o). Fica salvo neste celular, neste navegador. Desmarcou e n&atilde;o remarcou? Tire a marca&ccedil;&atilde;o e a vaga volta.</div>
+  <div class="section-intro">Marque uma vaga a cada agendamento confirmado (depois de mandar a mensagem de confirma&ccedil;&atilde;o). Fica salvo neste celular, neste navegador. Clientes selecionadas pro M&aacute;rcio tamb&eacute;m contam. Desmarcou e n&atilde;o remarcou? Tire a marca&ccedil;&atilde;o e a vaga volta.</div>
 
   <div class="vagas-resumo">
     <div class="num vagas-status-curto">Restam 25 vagas</div>
@@ -1474,7 +1538,7 @@ Leads chegam com &ldquo;Vim pela Black Friday antecipada do Werner&rdquo; na men
     <div class="rule"><span class="rule-num">5</span><span><strong>Revival &eacute; reconstru&ccedil;&atilde;o, Divine &eacute; nutri&ccedil;&atilde;o.</strong> Voc&ecirc; indica, a equipe confirma no sal&atilde;o. N&atilde;o prometa resultado.</span></div>
     <div class="rule"><span class="rule-num">6</span><span><strong>Colora&ccedil;&atilde;o fica fora.</strong> A partir de <span class="preco-coloracao">R$ 290</span>, valor final no sal&atilde;o. Pode agendar no mesmo dia do corte.</span></div>
     <div class="rule"><span class="rule-num">7</span><span><strong>A urg&ecirc;ncia s&atilde;o as <span class="vagas-total">25</span> vagas.</strong> S&atilde;o reais: a a&ccedil;&atilde;o fecha no <span class="vagas-total">25</span>&ordm; agendamento. Quantas restam, s&oacute; com o contador. A data (<span class="prazo-acao">14/11</span>, no m&aacute;ximo) &eacute; interna. No dia 27/11 n&atilde;o tem outra a&ccedil;&atilde;o.</span></div>
-    <div class="rule"><span class="rule-num">8</span><span><strong>O corte &eacute; com a equipe do M&aacute;rcio.</strong> Profissionais treinados por ele, com o mesmo padr&atilde;o.</span></div>
+    <div class="rule"><span class="rule-num">8</span><span><strong>O corte &eacute; com a equipe do M&aacute;rcio.</strong> Profissionais treinados por ele, com o mesmo padr&atilde;o. Exce&ccedil;&atilde;o: cliente selecionada pela equipe Avantis faz com o pr&oacute;prio M&aacute;rcio. Voc&ecirc; nunca oferece isso por conta pr&oacute;pria.</span></div>
     <div class="rule"><span class="rule-num">9</span><span><strong>Pagamento no dia, no sal&atilde;o.</strong> Sem sinal, sem Pix antecipado.</span></div>
     <div class="rule"><span class="rule-num">10</span><span><strong>Lembrete no dia anterior.</strong> Reduz falta e mostra cuidado.</span></div>
     <div class="rule"><span class="rule-num">11</span><span><strong>Marque cada agendamento no contador.</strong> Em <span class="vagas-aviso">20</span>, avise Christopher e Bianca. Em <span class="vagas-total">25</span>, pe&ccedil;a pra pausar os an&uacute;ncios.</span></div>
@@ -1633,6 +1697,14 @@ function goHome() {
   });
   document.getElementById('pipelineWrap').style.display = '';
   window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+function abrirCard(id) {
+  var card = document.getElementById(id);
+  if (!card) return;
+  card.classList.add('open');
+  var y = card.getBoundingClientRect().top + window.pageYOffset - 84;
+  window.scrollTo({ top: Math.max(y, 0), behavior: 'instant' });
 }
 
 function toggleCard(header) {
